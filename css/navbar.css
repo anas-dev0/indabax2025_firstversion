@@ -1,0 +1,401 @@
+:root {
+    --primary-color: #075388;
+    --primary-dark: #053961;
+    --text-color: #ffffff;
+    --text-muted: #e0e0e0;
+    --accent-color: #d2b48c;
+    --hover-color: #d2b48c;
+    --glow-color: rgba(210, 180, 140, 0.15);
+  }
+  
+  /* Base styles */
+  body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans",
+      Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: transparent; /* Start with transparent background */
+    background-image: none; /* Remove gradient initially */
+    box-shadow: none; /* Remove shadow initially */
+    padding: 0;
+    position: fixed; /* Change from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  /* Add a new class for the scrolled state */
+  .navbar.scrolled {
+    background-color: #075388;
+    background-image: linear-gradient(135deg, #075388 0%, #042d4e 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Background lighting effects */
+  .navbar::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at top right, transparent 0%, transparent 70%); /* Changed to transparent */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    right: -30%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at bottom left, transparent 0%, transparent 70%); /* Changed to transparent */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar.scrolled::before {
+    background: radial-gradient(ellipse at top right, var(--glow-color) 0%, transparent 70%); /* Add color only when scrolled */
+    opacity: 0.6;
+  }
+  
+  .navbar.scrolled::after {
+    background: radial-gradient(ellipse at bottom left, var(--glow-color) 0%, transparent 70%); /* Add color only when scrolled */
+    opacity: 0.4;
+    animation: pulseGlow 10s infinite alternate ease-in-out;
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Navbar container */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the logo horizontally */
+  }
+  
+  .navbar-logo img {
+    scale: 0.7;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  }
+  
+  .navbar-logo:hover img {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+  }
+  
+  /* Navigation links */
+  .navbar-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navbar-links li {
+    position: relative;
+    margin: 0 8px;
+  }
+  
+  .navbar-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 12px;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-color);
+  }
+  
+  .navbar-links a:hover {
+    color: var(--hover-color);
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+    background-color: var(--hover-color);
+  }
+  
+  /* Active link */
+  .navbar-links .active a {
+    color: var(--hover-color);
+  }
+  
+  .navbar-links .active a::after {
+    width: 100%;
+    background-color: var(--hover-color);
+  }
+  
+  /* Mobile toggler */
+  .navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    outline: none; /* Remove outline on focus/click */
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; /* Remove any box shadow */
+  }
+  
+  .navbar-toggler:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Floating particles */
+  .navbar-particle {
+    position: absolute;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: float 15s infinite linear;
+  }
+  .Display_none {
+    display: none;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-10px) translateX(10px) rotate(180deg);
+      opacity: 0.1;
+    }
+    75% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(360deg);
+      opacity: 0.1;
+    }
+  }
+  
+  /* Contact button */
+  .navbar-contact {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .navbar-contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+  }
+  
+  .navbar-contact:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+    box-shadow: 0 0 15px rgba(210, 180, 140, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  .navbar-contact:hover::before {
+    left: 100%;
+  }
+  
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-dark);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 100;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dropdown-content a {
+    color: var(--text-muted);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--hover-color);
+    padding-left: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative; /* Add this for absolute positioning of logo */
+      padding: 0.5rem 1rem;
+    }
+  
+    .navbar-toggler {
+      display: block;
+      z-index: 2000;
+    }
+  
+    .navbar-logo {
+      position: absolute; /* Position absolutely */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Adjust for logo width */
+      z-index: 1999; /* Slightly lower than buttons */
+    }
+  
+    .navbar-contact {
+      margin-left: auto; /* Push to the right */
+      z-index: 2000;
+      font-size: 14px;
+      padding: 6px 12px;
+      white-space: nowrap;
+    }
+  
+    /* Rest of your mobile styling remains the same */
+    .navbar-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-dark);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+      z-index: 1500;
+    }
+  
+    .navbar-links.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .navbar-links li {
+      margin: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-links a {
+      padding: 15px;
+      font-size: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+  
+    .navbar-links.active a {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.3s;
+    }
+  
+    .navbar-links a::after {
+      display: none;
+    }
+  
+    /* Add transition delays for menu items to create a staggered animation */
+    .navbar-links li:nth-child(1) a {
+      transition-delay: 0.1s;
+    }
+  
+    .navbar-links li:nth-child(2) a {
+      transition-delay: 0.2s;
+    }
+  
+    .navbar-links li:nth-child(3) a {
+      transition-delay: 0.3s;
+    }
+    /* Add a fullscreen overlay background */
+    body.menu-open {
+      overflow: hidden;
+    }
+    .navbar-contact {
+      font-size: 2.25vw;
+      width: 20vw;
+    }
+  }
+  
+  

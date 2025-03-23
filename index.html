@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="IndabaX Tunis is a local Deep Learning Indaba event in Africa, bringing AI enthusiasts together to expand their knowledge through workshops, keynotes, and the new 2024 poster session, led by esteemed regional AI experts. 🌍✨">
+    <meta name="keywords" content="IndabaX, IndabaXTunisia, indabax-tunisia, IndabaXTunisia2024,Indaba, IndabaX Tunisia, IndabaX Tunisia 2024, IEEE, SUPCOM, INSTADEEP, AI, Machine learning, event, engineering, poster session">
+	<meta property="og:title" content="IndabaX Tunisia 2025">
+    <meta property="og:image" content="https://www.indabaxtunisia.com/2024/assets/images/ogthumbnail.png">
+    <meta property="og:description" content="IndabaX Tunis is a local Deep Learning Indaba event in Africa, bringing AI enthusiasts together to expand their knowledge through workshops, keynotes, and the new 2024 poster session, led by esteemed regional AI experts. 🌍✨">
+    <meta property="og:url" content="https://www.indabaxtunisia.com/2024/index.html">
+
+    <meta name="og:description" content="IndabaX Tunis is a local Deep Learning Indaba event in Africa, bringing AI enthusiasts together to expand their knowledge through workshops, keynotes, and the new 2024 poster session, led by esteemed regional AI experts. 🌍✨">
+    <title>IndabaX Tunisia 2025</title>
+	<link rel="icon" type="image/png" sizes="192x192" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo192x.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo144x.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo96x.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo72x.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo48x.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo32x.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo16x.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://www.indabaxtunisia.com/2024/assets/images/icons/logo192x.png">
+
+    <link rel="canonical" href="https://www.indabaxtunisia.com/2025/index.html">
+    <link rel="stylesheet" href="./css/about_css.css">
+    <link rel="stylesheet" href="./css/location_css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Using Font Awesome 6 for better icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="logo-container" id="logoContainer">
+            <div class="pulse-circle"></div>
+            <div class="pulse-circle"></div>
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/INDABAXLOGO-pQXTJTmsePYaVAq7kk8171nVYCY9qy.png" alt="IndabaX Logo" class="logo">
+            <div class="spinner"></div>
+        </div>
+        <!-- Expanding circle that will fill the screen -->
+        <div class="expanding-circle" id="expandingCircle"></div>
+        <div class="progress-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="light-streak"></div>
+                </div>
+            </div>
+            <div class="progress-text" id="progressText">Loading... 0%</div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Particles for animation -->
+        <div class="navbar-particle" style="width: 6px; height: 6px; top: 20%; left: 10%; animation-duration: 15s;"></div>
+        <div class="navbar-particle" style="width: 8px; height: 8px; top: 60%; left: 20%; animation-duration: 18s; animation-delay: 1s;"></div>
+        <div class="navbar-particle" style="width: 5px; height: 5px; top: 30%; left: 70%; animation-duration: 20s; animation-delay: 2s;"></div>
+        <div class="navbar-particle" style="width: 7px; height: 7px; top: 75%; left: 80%; animation-duration: 17s; animation-delay: 3s;"></div>
+        
+        <div class="container navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <a href="#">
+                    <img src="./assests/navlog.png" alt="IndabaX Logo">
+                </a>
+            </div>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" id="navbar-toggler">
+                <i class="fa fa-bars"></i>
+            </button>
+            
+            <!-- Navigation Links -->
+            <ul class="navbar-links" id="navbar-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#About_indaba">IndabaX</a></li>
+                <li><a href="#Hackaton-Section">Poster Session</a></li>
+                <li><a href="#locationAttachment">Location</a></li>
+            </ul>
+            <!-- Contact Button -->
+            <a href="#registration" class="navbar-contact">Register Now</a>
+        </div>
+    </nav>
+    <section id="hero" >
+        <section class="section banner1 banner-section" >
+            <div class="container1 banner-column">
+                <div class="banner-inner">
+                    <h1 class="">IndabaX Tunisia 2025</h1>
+                    <p class="">
+                        Welcome to the <strong> 6<sup>th</sup> edition of IndabaX Tunisia!</strong>  Get ready for two dynamic days filled with panels,
+                        workshops, talks, a hackathon, and more. Last year, <strong>the poster session</strong> was a great success,
+                        so we’re excited to continue and build on it this year! AI enthusiasts,
+                        this is your moment <strong>Don't miss out!</strong>
+                    </p>
+                    <div>
+                        <h2>May 3<sup>th</sup> & 4<sup>th</sup>, 2025</h2>
+                        <h2>Sup’com, Technopole El Ghazela</h2>
+                    </div>
+                    <a>
+                        <button class="btn1 btn1-darken btn1-inline" onclick="togglepopup()">
+                            <div class="textt">
+                                Register Now
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+                <img class="banner-image" src="./assests/LOGOINDABABlack.png" alt="Indaba 2024">
+                <div class="banner-links">
+                    <a href="https://www.facebook.com/IndabaXTunisia/" target="_blank"><i
+                            class="bx bxl-facebook"></i></a>
+                    <a href="https://twitter.com/indabaxtunisia" target="_blank"><svg class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                      </svg></a>
+                    <a href="https://tn.linkedin.com/company/indabax-tunisia" target="_blank"><i
+                            class='bx bxl-linkedin-square'></i></i></a>
+                    <a href="https://www.instagram.com/indabaxtunisia/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--About_IndabaX2025-->
+    <section class="scroll-section" id="About_indaba">
+        <!-- Section boundary markers for entry/exit detection -->
+        <div class="section-boundary" id="section-start" data-boundary="start"></div>
+        
+        <!-- Invisible trigger elements - positioned at specific heights -->
+        <div class="trigger" id="trigger1" data-section="section1"></div>
+        <div class="trigger" id="trigger2" data-section="section2"></div>
+        <div class="trigger" id="trigger3" data-section="section3"></div>
+        <div class="trigger" id="trigger4" data-section="section4"></div>
+        <div class="trigger" id="trigger5" data-section="section5"></div>
+        
+        <!-- Section end boundary -->
+        <div class="section-boundary" id="section-end" data-boundary="end"></div>
+        
+        <!-- Sticky container that holds both image and text -->
+        <div class="sticky-container">
+            <div class="content-wrapper initial-state">
+                <div class="image-container">
+                    <img id="featured-image" src="./assests/logo_indaba_white@4x.png" alt="Featured image" class="image-enter">
+                </div>
+                
+                <div class="text-container">
+                    <div class="text-section" id="section1">
+                        <H1>About</H1>
+                        <H1 style="margin-bottom: 20px;">IndabaX 2025</H1>
+                        <div class="decorative-line"></div>
+                    </div>
+                    
+                    <div class="text-section" id="section2">
+                        <p>IndabaX Tunisia is a local chapter of the Deep Learning Indaba, bringing together professionals and AI enthusiasts to connect, share ideas, and explore the latest advancements in Artificial Intelligence.</p>
+                        <div class="decorative-line"></div>
+                    </div>
+                    
+                    <div class="text-section" id="section3">
+                        <p>This two-day event offers attendees an immersive experience with inspiring keynote talks, interactive workshops, and an intense 20-hour hackathon.</p>
+                        <div class="decorative-line"></div>
+                    </div>
+                    
+                    <div class="text-section" id="section4">
+                        <span id="test2">For its <strong>6<sup>th</sup> edition,</strong> the IEEE Sup'Com Student Branch is organizing this event to exceed expectations, providing valuable opportunities to grow your network and enhance your expertise in Artificial Intelligence.
+                        </span>
+                        <div class="decorative-line"></div>
+                    </div>
+                    
+                    <div class="text-section" id="section5">
+                        <h1 class="presented-by">Presented to you by</h1>
+                        <div class="logos-container">
+                            <img src="./assests/IEEE LOGOnouveau blanc.png" alt="IEEE Logo" class="sponsor-logo" style="scale:1.4">
+                            <img src="./assests/Instadeep.png" alt="Instadeep Logo" class="sponsor-logo">
+                        </div>
+                        <div class="decorative-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Location -->
+    <section id="locationAttachment">
+        <h1>
+            <i class="fa-solid fa-location-dot title-icon"></i>
+            Location
+        </h1>
+        <div class="container text-center"> 
+            <div class="row justify-content-center"> 
+                <div class="col-lg-8">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.9365322124095!2d10.185198974957506!3d36.89186656252835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb6fc49b7883%3A0x84da64ea383c01d2!2s%C3%89cole%20Sup%C3%A9rieure%20des%20communications%20de%20Tunis!5e0!3m2!1sfr!2stn!4v1712850130272!5m2!1sfr!2stn" width="100%" height="auto" frameborder="0" style="border:0; border-radius: 15px; position: relative; z-index: 2;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="contact-info">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div class="relativeinfo">
+                                        <h4>Phone:</h4>
+                                        <span>+216 55614415</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="contact-info">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-envelope-open-text"></i>
+                                    </div>
+                                    <div class="relativeinfo">
+                                        <h4>Email:</h4>
+                                        <span>indabaxtunisia<span class="break-lg"><br></span>@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4"> 
+                                <div class="contact-info">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="relativeinfo">
+                                        <h4>Location:</h4>
+                                        <span>Sup'Com</span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 70px;"></div>
+    </section>
+    <!-- footer -->
+    <section id="Footer">
+        <footer>
+            <!-- Floating particles for animation -->
+            <div class="floating-particle" style="width: 15px; height: 15px; top: 20%; left: 10%; animation-duration: 25s;"></div>
+            <div class="floating-particle" style="width: 10px; height: 10px; top: 30%; left: 80%; animation-duration: 20s; animation-delay: 2s;"></div>
+            <div class="floating-particle" style="width: 20px; height: 20px; top: 70%; left: 15%; animation-duration: 30s; animation-delay: 5s;"></div>
+            <div class="floating-particle" style="width: 12px; height: 12px; top: 60%; left: 75%; animation-duration: 22s; animation-delay: 3s;"></div>
+            <div class="floating-particle" style="width: 8px; height: 8px; top: 10%; left: 40%; animation-duration: 18s; animation-delay: 7s;"></div>
+            
+            <div class="container">
+                <!-- Main Footer Content -->
+                <div class="row">
+                    <!-- Logo and About Section -->
+                    <div class="col-md-4 footer-column">
+                        <img src="./assests/logo_indaba_white@4x.png" alt="IndabaX Logo" class="footer-logo">
+                        <div class="footer-about">
+                            <p>IndabaX Tunisia brings together machine learning researchers, data scientists, and AI enthusiasts for knowledge sharing and collaboration across Tunisia.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Links -->
+                    <div class="col-md-4 footer-column">
+                        <div class="footer-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#hero">Home</a></li>
+                                <li><a href="#About_indaba">About IndabaX</a></li>
+                             <!--   <li><a href="#Hackaton-Section">Hackathon</a></li>
+                                <li><a href="#speaker-section">Speakers</a></li>
+                                <li><a href="#program-section">Program</a></li>-->
+                                <li><a href="#poster-session">Poster Session</a></li>
+                             <!-- <li><a href="#Sponsors-Section">Partners</a></li>-->  
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact & Previous Editions -->
+                    <div class="col-md-4 footer-column">
+                        <div class="footer-links">
+                            <h4>Previous Editions</h4>
+                            <ul>
+                                <li><a href="https://www.indabaxtunisia.com/2019/" target="_blank">IndabaX 2019</a></li>
+                                <li><a href="https://www.indabaxtunisia.com/2021/" target="_blank">IndabaX 2021</a></li>
+                                <li><a href="https://www.indabaxtunisia.com/2023/" target="_blank">IndabaX 2023</a></li>
+                                <li><a href="https://www.indabaxtunisia.com/2024/" target="_blank">IndabaX 2024</a></li>
+                            </ul>
+                            
+                            <h4>Connect With Us</h4>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/IndabaXTunisia/" target="_blank" aria-label="Facebook"><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/indabaxtunisia" target="_blank" aria-label="Twitter">
+                                    <svg class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/indabaxtunisia/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://tn.linkedin.com/company/indabax-tunisia" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Divider -->
+                <hr class="footer-divider">
+                
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <p>Copyright © <script>document.write(new Date().getFullYear())</script> DeepLearningINDABAXTunisia. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="./js/footer.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/landing.js"></script>
+</body>
+</html>
+

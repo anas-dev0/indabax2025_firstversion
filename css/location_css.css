@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#locationAttachment {
+    background-color: #075388;
+    user-select: text !important;
+}
+  
+#locationAttachment:after {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 60px;
+    width: 267px;
+    height: 396px;
+    z-index: 1;
+}
+
+#locationAttachment .contact-info {
+    background-color: #fff;
+    margin-top: -30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#locationAttachment .contact-info:hover {
+    transform: translateY(-5px);
+}
+
+#locationAttachment .icon i {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(-145deg, #075388 0%, #D2B48C 100%);
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#locationAttachment .contact-info h4 {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#locationAttachment .contact-info span {
+    font-size: 15px;
+    color: #075388;
+    font-weight: 700;
+}
+
+#locationAttachment .section-heading {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.icon {
+    max-width: 75px;
+    min-height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+@media (max-width: 991.98px) {
+    .relativeinfo {
+        display: flex;
+    }
+    .break-lg {
+        display: none;
+    }
+    #locationAttachment .contact-info h4 {
+        margin: 10px;
+    }
+    #locationAttachment .contact-info span {
+        margin: 9px;
+        margin-left: 0px;
+    }
+    #locationAttachment .row {
+        row-gap: 2em;
+    }
+    #locationAttachment .contact-info {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 992px) {
+    .break-lg {
+        display: inline; 
+    }
+}
+
+.col-lg-8 #map iframe {
+    height: 480px;
+}
+
+#locationAttachment h1 {
+    position: relative;
+    color: #ffffff;
+    padding: 6% 0;
+    text-align: center;
+    width: 100%;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for the location icon in the title */
+.title-icon {
+    color: #D2B48C;
+    animation: pulse 2s infinite;
+    font-size: 0.8em; /* Smaller icon size */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 60vw !important;
+        height: 300%;
+        max-height: none;
+        max-width: none;
+    }
+    .col-lg-8 #map iframe {
+        height: 48vh;
+    }
+    #locationAttachment h1 {
+        font-size: 6rem;
+    }
+    .title-icon {
+        font-size: 0.8em; /* Keeping the icon proportionally smaller */
+    }
+}
