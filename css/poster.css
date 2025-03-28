@@ -1,0 +1,348 @@
+:root {
+    --dark-navy: #001D5A;
+    --navy: #042D62;
+    --medium-blue: #075388;
+    --light-blue: #BFD6ED;
+    --cream: #F0EAE6;
+    --light-beige: #E8E0D9;
+    --gold: #D2B48C;
+    --white: #FFFFFF;
+}
+#poster_session::before,
+#poster_session::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+}
+/* #poster_session::after {
+    translate: 0px -20px;
+	top: 0;
+    background: linear-gradient(to top, #075388 0%, rgba(0, 0, 0, 0) 50%);
+} */
+#poster_session::before {
+    bottom: 0;
+    background: linear-gradient(to top, #075388 0%, rgba(0, 0, 0, 0) 50%);
+}
+#poster_session {
+    background: url(../assests/site_cover.png);
+    background-color: var(--navy);
+    background-size: cover;
+    color: var(--white);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 5vh;
+    position: relative;
+}
+
+.Poster_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+#poster_session .announcement-card h1{
+    font-size: 2rem;
+}
+/* Announcement Card */
+.announcement-card {
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(4, 45, 98, 0.7);
+    border: 1px solid rgba(191, 214, 237, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+#poster_session h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+#poster_session h1 span {
+    font-weight: 600;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+.main-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#poster_session h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.read-more-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--dark-navy);
+    margin: 50px auto;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 15px;
+    border: 1px solid rgba(191, 214, 237, 0.2);
+    animation: modalFadeIn 0.3s;
+}
+.modal-header img:hover{
+    transform: rotate(90deg) scale(1.2);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#poster_session .modal-header {
+    padding: 30px 20px 20px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+}
+
+#poster_session .modal-header h2 {
+    color: var(--gold);
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--gold);
+}
+
+.modal-body {
+    padding: 0 30px 30px;
+}
+
+/* FAQ Items */
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: var(--medium-blue);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.faq-question.active {
+    background-color: var(--gold);
+}
+
+.faq-question span {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.faq-question.active span {
+    color: var(--dark-navy);
+}
+
+.faq-question i {
+    color: var(--white);
+    transition: transform 0.3s;
+}
+
+.faq-question.active i {
+    color: var(--dark-navy);
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px 20px;
+    background-color: rgba(7, 83, 136, 0.3);
+    margin-top: 2px;
+    border-radius: 0 0 5px 5px;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer p {
+    color: var(--white);
+}
+
+.faq-answer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+.poster_last_textcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    gap: 2.5rem;
+}
+.poster_last_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    flex-direction: column;
+    text-align: center;
+}
+.poster_last_text p{
+    font-size: 23px;
+}
+.poster_last_textcontainer button{
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    outline: 0;
+    border: none;
+    border-radius: 70px;
+    text-transform: unset;
+    overflow: hidden;
+    padding: 0;
+    width: 175px;
+    color: white;
+    height: 70px;
+    background-color: tan;
+    transition: ease 0.5s;
+}
+.poster_last_textcontainer button:hover{
+    cursor: pointer;
+    background-color: #075388;
+    color: black;
+}
+.close-btn img{
+    width: 45px;
+    height: 45px; 
+    transition: 0.5s ease-in-out;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    #poster_session h1{
+        font-size: 2.5rem;
+    }
+    .announcement-card {
+        padding: 30px 20px;
+    }
+    
+    #poster_session h2 {
+        font-size: 1.3rem;
+    }
+    
+    .main-text {
+        font-size: 1rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 30px auto;
+    }
+    
+    #poster_session .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .faq-question span {
+        font-size: 0.9rem;
+    }
+    .modal{
+        padding-top: 20vh;
+    }
+    #poster_session .announcement-card h1{
+        font-size: 1.75rem;
+    }
+    .close-btn img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 500px){
+    #poster_session .announcement-card h1{
+        font-size: 1.5rem;
+    }
+    #poster_session .close-btn img {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width:450px){
+    #poster_session .close-btn img {
+        width: 30px;
+        height: 30px;
+    }
+    #poster_session .modal-header h2 {
+        font-size: 1.25rem;
+    }
+}

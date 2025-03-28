@@ -26,7 +26,7 @@
 }
 
 /* Background lighting effects */
-#Footer footer::before {
+/* #Footer footer::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -49,7 +49,7 @@
     opacity: 0.4;
     pointer-events: none;
     animation: pulseGlow 10s infinite alternate ease-in-out;
-}
+} */
 
 @keyframes pulseGlow {
     0% {
@@ -208,6 +208,7 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
+    fill: white;
 }
 
 /* Updated hover styles for social media icons */

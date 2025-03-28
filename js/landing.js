@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const progcont =document.querySelector(".progress-container")
     // ===== CONTROL LOADING TIME HERE =====
     // Set the loading duration in milliseconds (e.g., 3000 = 3 seconds)
-    const LOADING_DURATION = 2000; 
+    const LOADING_DURATION = 1500; 
     // ====================================
     
     let progress = 0;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadingScreen.style.pointerEvents = 'none';
                     
                     // Show main content
-                    mainContent.style.display = 'block';
+                    //mainContent.style.display = 'block';
                     
                     // After transition completes, remove the loading screen from DOM
                     // but keep the background color of the page unchanged

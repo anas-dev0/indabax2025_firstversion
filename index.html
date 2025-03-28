@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="IndabaX Tunis is a local Deep Learning Indaba event in Africa, bringing AI enthusiasts together to expand their knowledge through workshops, keynotes, and the new 2024 poster session, led by esteemed regional AI experts. 🌍✨">
     <meta name="keywords" content="IndabaX, IndabaXTunisia, indabax-tunisia, IndabaXTunisia2024,Indaba, IndabaX Tunisia, IndabaX Tunisia 2024, IEEE, SUPCOM, INSTADEEP, AI, Machine learning, event, engineering, poster session">
@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/poster.css">
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -84,15 +85,16 @@
             
             <!-- Navigation Links -->
             <ul class="navbar-links" id="navbar-links">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#hero">Home</a></li>
                 <li><a href="#About_indaba">IndabaX</a></li>
-                <li><a href="#Hackaton-Section">Poster Session</a></li>
+                <li><a href="#poster_session">Poster Session</a></li>
                 <li><a href="#locationAttachment">Location</a></li>
             </ul>
             <!-- Contact Button -->
             <a href="#registration" class="navbar-contact">Register Now</a>
         </div>
     </nav>
+    <!--Home-->
     <section id="hero" >
         <section class="section banner1 banner-section" >
             <div class="container1 banner-column">
@@ -105,7 +107,7 @@
                         this is your moment <strong>Don't miss out!</strong>
                     </p>
                     <div>
-                        <h2>May 3<sup>th</sup> & 4<sup>th</sup>, 2025</h2>
+                        <h2>May 3<sup>rd</sup> & 4<sup>th</sup>, 2025</h2>
                         <h2>Sup’com, Technopole El Ghazela</h2>
                     </div>
                     <a>
@@ -179,12 +181,107 @@
                     <div class="text-section" id="section5">
                         <h1 class="presented-by">Presented to you by</h1>
                         <div class="logos-container">
-                            <img src="./assests/IEEE LOGOnouveau blanc.png" alt="IEEE Logo" class="sponsor-logo" style="scale:1.4">
+                            <img src="./assests/IEEE_new.png" alt="IEEE Logo" class="sponsor-logo" >
                             <img src="./assests/Instadeep.png" alt="Instadeep Logo" class="sponsor-logo">
                         </div>
                         <div class="decorative-line"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!--Poster Session-->
+    <section id="poster_session">
+        <h1>Poster Session</h1>
+        <div class="Poster_container">
+            <div class="announcement-card">
+                <h1>Dear <span class="highlight">PhD Students,</span></h1>
+                <p class="main-text">
+                    Join us at <strong> IndabaX Tunisia 2025</strong> to share your AI research,
+                    connect with peers, and learn from industry leaders.
+                    This is your opportunity to showcase your innovative projects,
+                    gain valuable feedback, and engage with a vibrant community
+                    passionate about advancing AI. 
+                </p>
+                <p class="main-text">
+                    Don’t miss the chance to be part of an event that fosters
+                    collaboration and drives the future of AI forward.
+                </p>
+                <h2>See you at IndabaX Tunisia 2025!</h2>
+                <button id="read-more-btn" class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="faq-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #042D62; border-top-left-radius: 15px; border-top-right-radius: 15px; box-shadow: none;">
+                    <h2>Frequently Asked Questions</h2>
+                    <span class="close-btn"><img src="./assests/prjt.png" alt="closing_image" ></span>
+                </div>
+                <div class="modal-body" style="background-color: #042D62; border-bottom-right-radius:15px; border-bottom-left-radius: 15px; box-shadow: none;">
+                    <!-- FAQ Items -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>When is the deadline for the registration and the submission of the posters?</span>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="faq-answer active">
+                            <p>Deadline for the registration is on 23th April,2025</p>
+                           <!-- <p>Deadline for the posters submission is on XX</p>-->
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I re-use this poster in other events?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Posters submitted in IndabaX 2025 can all be submitted again in other events</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>When and where will it take place?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It's going to be in the Higher School of Communication at Technopole-El Ghazela on May 3rd,2025.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>To whom will I be presenting my poster?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>AI enthousiasts and members of the jury.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What should my poster look like?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <div>- <a style="color: white;" href="https://drive.google.com/drive/folders/1QXEO7ycC8YMBeJ12EuJCr6dLn5L-PAca?usp=drive_link" target="_blank"> follow this link </a> -  template size: A0 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="poster_last_textcontainer">
+            <div class="poster_last_text">
+            <p>If you're a <strong>PHD student</strong>and 
+            want to present your AI related reseach,</p>
+            <p>reach out through <strong>this form</strong></p>
+            </div>
+            <div>
+                <button>Register</button>
             </div>
         </div>
     </section>
@@ -220,7 +317,7 @@
                                         <h4>Email:</h4>
                                         <span>indabaxtunisia<span class="break-lg"><br></span>@gmail.com</span>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                             <div class="col-lg-4"> 
                                 <div class="contact-info">
@@ -271,7 +368,7 @@
                              <!--   <li><a href="#Hackaton-Section">Hackathon</a></li>
                                 <li><a href="#speaker-section">Speakers</a></li>
                                 <li><a href="#program-section">Program</a></li>-->
-                                <li><a href="#poster-session">Poster Session</a></li>
+                                <li><a href="#poster_session">Poster Session</a></li>
                              <!-- <li><a href="#Sponsors-Section">Partners</a></li>-->  
                             </ul>
                         </div>
@@ -317,6 +414,7 @@
     <script src="./js/script.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/landing.js"></script>
+    <script src="./js/poster.js"></script>
 </body>
 </html>
 

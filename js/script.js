@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Exiting through bottom
             featuredImage.classList.remove("image-active", "image-enter", "image-enter-bottom")
             featuredImage.classList.add("image-exit")
+            
           } else {
             // Exiting through top
             featuredImage.classList.remove("image-active", "image-enter", "image-enter-bottom")

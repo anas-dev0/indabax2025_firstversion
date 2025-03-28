@@ -3,6 +3,7 @@ body {
 }
 
 #locationAttachment {
+    padding-top: 30px;
     background-color: #075388;
     user-select: text !important;
 }
@@ -93,6 +94,8 @@ body {
     #locationAttachment .contact-info {
         padding: 5px;
     }
+    
+    
 }
 
 @media (min-width: 992px) {
@@ -161,5 +164,10 @@ body {
     }
     .title-icon {
         font-size: 0.8em; /* Keeping the icon proportionally smaller */
+    }
+}
+@media screen and (max-width: 550px){
+    #locationAttachment h1 {
+        font-size: 2.75rem;
     }
 }
