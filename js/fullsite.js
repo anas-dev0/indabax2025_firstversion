@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded",()=>{const navbarToggler=document.g
     const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
     const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
     function check_date(){let currentDate=new Date()
-    if(currentDate<registration_open){notyet.style.display="flex"}else if(currentDate>=deadline_registration){popup.style.display="flex"}else{window.location.href=registration_link}}
+    if(currentDate<registration_open){notyet.style.display="flex"}else if(currentDate>=deadline_registration){popup.style.display="flex"}else{window.open(registration_link,"_blank")}}
     function check_date_poster(){let currentDate=new Date()
     if(currentDate>deadline_poster){popup.style.display="flex"}else{window.open(poster_link,"_blank")}}
     const paragraph=document.getElementById("parag")
