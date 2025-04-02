@@ -16,7 +16,7 @@ padding: 0;
 position: fixed; /* Change from sticky to fixed */
 top: 0;
 width: 100%; /* Ensure it spans the full width */
-z-index: 1000;
+z-index: 999;
 transition: all 0.3s ease;
 /* Removed overflow: hidden to fix iOS dropdown issue */
 }

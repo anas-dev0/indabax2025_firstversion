@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/poster.css">
     <link rel="stylesheet" href="./css/last_edition.css">
+    <link rel="stylesheet" href="./css/registration.css">
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -93,9 +94,16 @@
                 <li><a href="#locationAttachment">Location</a></li>
             </ul>
             <!-- Contact Button -->
-            <a href="#registration" class="navbar-contact">Register Now</a>
+            <a href="#registration" class="navbar-contact" onclick="check_date()">Register Now</a>
         </div>
     </nav>
+    <div class="registration_end">
+        <div class="registration_end1">
+            <div  class="image_close"><img src="./assests/prjt.png" alt="close_icon"></div>
+            <p >Sorry Registration is closed</p>
+            <p id="parag">See you at IndabaX</p>
+        </div>
+    </div>
     <!--Home-->
     <section id="hero" >
         <section class="section banner1 banner-section" >
@@ -113,7 +121,7 @@
                         <h2>Sup’com, Technopole El Ghazela</h2>
                     </div>
                     <a>
-                        <button class="btn1 btn1-darken btn1-inline" onclick="togglepopup()">
+                        <button class="btn1 btn1-darken btn1-inline" onclick="check_date()">
                             <div class="textt">
                                 Register Now
                                 <i class="bx bx-right-arrow-alt"></i>
@@ -282,7 +290,7 @@
             want to present your AI related reseach,</p>
             <p>reach out through <strong>this form</strong></p>
             </div>
-            <div class="poster_register_botton">
+            <div class="poster_register_botton" onclick="check_date()">
                 <button>Register</button>
             </div>
         </div>
@@ -436,6 +444,7 @@
     <script src="./js/landing.js"></script>
     <script src="./js/poster.js"></script>
     <script src="./js/last_edition.js"></script>
+    <script src="./js/registration.js"></script>
 </body>
 </html>
 
