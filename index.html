@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/poster.css">
+    <link rel="stylesheet" href="./css/last_edition.css">
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -88,6 +89,7 @@
                 <li class="active"><a href="#hero">Home</a></li>
                 <li><a href="#About_indaba">IndabaX</a></li>
                 <li><a href="#poster_session">Poster Session</a></li>
+                <li><a href="#last_years_edition">Last Edition</a></li>
                 <li><a href="#locationAttachment">Location</a></li>
             </ul>
             <!-- Contact Button -->
@@ -182,7 +184,7 @@
                         <h1 class="presented-by">Presented to you by</h1>
                         <div class="logos-container">
                             <img src="./assests/IEEE_new.png" alt="IEEE Logo" class="sponsor-logo" >
-                            <img src="./assests/Instadeep.png" alt="Instadeep Logo" class="sponsor-logo">
+                            <!-- <img src="./assests/Instadeep.png" alt="Instadeep Logo" class="sponsor-logo"> -->
                         </div>
                         <div class="decorative-line"></div>
                     </div>
@@ -280,8 +282,25 @@
             want to present your AI related reseach,</p>
             <p>reach out through <strong>this form</strong></p>
             </div>
-            <div>
+            <div class="poster_register_botton">
                 <button>Register</button>
+            </div>
+        </div>
+    </section>
+    <section id="last_years_edition">
+        <div class="lye-container">
+            <h1 class="lye-title">Last Year's Edition</h1>
+            <div class="lye-scroller-container" id="lyeScrollerContainer">
+                <div class="lye-scroller lye-scrolling" id="lyeScroller">
+                    <!-- Images will be added here by JavaScript -->
+                </div>
+            </div>
+            
+        </div>
+        <div class="lye_video_centent">
+            <h1>Last Year's after movie</h1>
+            <div class="lye_video_container">
+                <video src="./assests/previous_year_edition/after_movie.mp4" controls></video>
             </div>
         </div>
     </section>
@@ -369,6 +388,7 @@
                                 <li><a href="#speaker-section">Speakers</a></li>
                                 <li><a href="#program-section">Program</a></li>-->
                                 <li><a href="#poster_session">Poster Session</a></li>
+                                <li><a href="#last_years_edition">Last Edition</a></li>
                              <!-- <li><a href="#Sponsors-Section">Partners</a></li>-->  
                             </ul>
                         </div>
@@ -415,6 +435,7 @@
     <script src="./js/navbar.js"></script>
     <script src="./js/landing.js"></script>
     <script src="./js/poster.js"></script>
+    <script src="./js/last_edition.js"></script>
 </body>
 </html>
 

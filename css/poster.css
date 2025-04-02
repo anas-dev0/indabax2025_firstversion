@@ -22,9 +22,15 @@
     background: linear-gradient(to top, #075388 0%, rgba(0, 0, 0, 0) 50%);
 } */
 #poster_session::before {
-    bottom: 0;
-    background: linear-gradient(to top, #075388 0%, rgba(0, 0, 0, 0) 50%);
+    top: 0;
+    background: linear-gradient(to bottom, #075388 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+#poster_session::after {
+    bottom: 0;
+    background: linear-gradient(to top, #075388 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 #poster_session {
     background: url(../assests/site_cover.png);
     background-color: var(--navy);
@@ -261,6 +267,8 @@
     font-size: 23px;
 }
 .poster_last_textcontainer button{
+    cursor: pointer;
+    position: relative;
     font-family: inherit;
     font-size: 1.3rem;
     font-weight: 600;
@@ -277,6 +285,7 @@
     height: 70px;
     background-color: tan;
     transition: ease 0.5s;
+    z-index: 5;
 }
 .poster_last_textcontainer button:hover{
     cursor: pointer;
