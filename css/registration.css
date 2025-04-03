@@ -50,12 +50,16 @@
     font-size: 2rem;
     font-weight: 500;
     color: white;
+    margin-right: 15px;
+    margin-left: 15px;
     
 }
 .registration_notyet1 p{
     font-size: 2rem;
     font-weight: 500;
     color: white;
+    margin-right: 15px;
+    margin-left: 15px;
     
 }
 .image_close{
@@ -105,6 +109,12 @@
     .registration_notyet1 p{
         font-size: 1.3rem;
     }
+    .registration_notyet1{
+        height: 25%;
+    }
+    .registration_end1{
+        height: 25%;
+    }
 }
 @media (max-width:400px){
     .registration_end1 p{
@@ -112,5 +122,11 @@
     }
     .registration_notyet1 p{
         font-size: 1rem;
+    }
+    .registration_notyet1{
+        height: 25%;
+    }
+    .registration_end1{
+        height: 25%;
     }
 }

@@ -32,7 +32,7 @@
 }
 
 #poster_session {
-    background: url(../assests/site_cover.png);
+    background: url(../assests/site\ cover_2.png);
     background-color: var(--navy);
     background-size: cover;
     color: var(--white);
@@ -254,6 +254,7 @@
     flex-direction: column;
     padding-bottom: 2rem;
     gap: 2.5rem;
+    
 }
 .poster_last_text {
     display: flex;
@@ -262,6 +263,7 @@
     width: fit-content;
     flex-direction: column;
     text-align: center;
+    
 }
 .poster_last_text p{
     font-size: 23px;
@@ -270,7 +272,7 @@
     cursor: pointer;
     position: relative;
     font-family: inherit;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.5;
     text-align: center;
@@ -288,9 +290,9 @@
     z-index: 5;
 }
 .poster_last_textcontainer button:hover{
+    background-color: rgb(240, 234, 230);
     cursor: pointer;
-    background-color: #075388;
-    color: black;
+    color: rgb(15, 27, 44);
 }
 .close-btn img{
     width: 45px;

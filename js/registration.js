@@ -20,8 +20,8 @@ notyet.addEventListener("click",(e)=>{
     }
 })
 
-const deadline_poster= new Date(2025,3,22,23,59,59)
-const deadline_registration= new Date(2025,4,2,23,59,59)
+const deadline_poster= new Date(2025,3,23)
+const deadline_registration= new Date(2025,4,3)
 const registration_open=new Date (2025,3,22)
 const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
 const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
@@ -39,7 +39,11 @@ function check_date(){
 }
 function check_date_poster(){
     let currentDate= new Date()
-    if(currentDate>deadline_poster){
+    let poster_open=new Date(2025,3,10)
+    if(currentDate<poster_open){
+        notyet.style.display= "flex"
+    }
+    else if(currentDate>deadline_poster){
         popup.style.display= "flex"
     }
     else{
@@ -47,7 +51,6 @@ function check_date_poster(){
     }
 }
 const paragraph=document.getElementById("parag")
-console.log(paragraph)
 function updateTime(){
     let currentDate= new Date()
     const month=currentDate.getMonth()
@@ -63,3 +66,20 @@ function updateTime(){
 
 updateTime()
 setInterval(updateTime, 1000);
+const question1=document.querySelector(".question1")
+const answer1=document.querySelector(".answer1")
+function questionchange(){
+    let currentDate=new Date()
+    let poster_open=new Date(2025,3,8)
+    let x
+    if(currentDate<poster_open){
+        question1.innerText="When does the registration for the poster session begin?"
+        answer1.innerText="the registration for poster session will be available on 10th April,2025"
+    }
+    else{
+        question1.innerText="When is the deadline for the registration of the poster session?"
+        answer1.innerText="Deadline for the registration is on 23th April,2025"
+    }
+}
+questionchange()
+setInterval(questionchange,1000)

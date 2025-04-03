@@ -5,61 +5,110 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainContent = document.getElementById('mainContent');
     const logoContainer = document.getElementById('logoContainer');
     const expandingCircle = document.getElementById('expandingCircle');
-    const progcont =document.querySelector(".progress-container")
-    // ===== CONTROL LOADING TIME HERE =====
-    // Set the loading duration in milliseconds (e.g., 3000 = 3 seconds)
-    const LOADING_DURATION = 1500; 
-    // ====================================
+    const progcont = document.querySelector(".progress-container");
     
     let progress = 0;
-    const startTime = Date.now();
-    const endTime = startTime + LOADING_DURATION;
+    let isLoaded = false;
     
-    // Function to update progress based on elapsed time
-    function updateProgress() {
-        const currentTime = Date.now();
-        const elapsedTime = currentTime - startTime;
-        progress = Math.min(100, (elapsedTime / LOADING_DURATION) * 100);
+    // Function to track loading progress
+    function trackLoadingProgress() {
+        const resources = Array.from(document.querySelectorAll('script, img, link[rel="stylesheet"]'));
+        const totalResources = Math.max(1, resources.length);
+        let loadedResources = 0;
         
-        // Update progress bar and text
-        progressBar.style.width = `${progress}%`;
-        progressText.textContent = `Loading... ${Math.round(progress)}%`;
-        
-        if (progress < 100) {
-            // Continue updating if not complete
-            requestAnimationFrame(updateProgress);
-        } else {
-            progcont.classList.add('no_display')
-            // Loading complete - animate logo getting bigger
-            logoContainer.classList.add('completed');
+        // Update progress bar based on loaded resources
+        function updateProgressBar() {
+            const currentProgress = Math.min(95, Math.round((loadedResources / totalResources) * 100));
             
-            // Wait a moment after logo grows, then expand the circle
-            setTimeout(() => {
-                // Start circle expansion
-                expandingCircle.classList.add('expand');
-                
-                // After circle expansion completes, transition to main content
-                setTimeout(() => {
-                    // Hide loading screen but keep the background color
-                    loadingScreen.style.opacity = '0';
-                    loadingScreen.style.pointerEvents = 'none';
-                    
-                    // Show main content
-                    //mainContent.style.display = 'block';
-                    
-                    // After transition completes, remove the loading screen from DOM
-                    // but keep the background color of the page unchanged
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }, 500); // Match this with the circle expansion duration
-            }, 800);
+            // Ensure we don't decrease the progress
+            if (currentProgress > progress) {
+                progress = currentProgress;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `Loading... ${progress}%`;
+            }
+            
+            // If we've detected page is ready, animate to 100%
+            if (isLoaded && progress < 100) {
+                animateToCompletion();
+            }
         }
+        
+        // Check already loaded resources
+        resources.forEach(resource => {
+            if ((resource.tagName === 'LINK' && resource.sheet) || 
+                (resource.tagName === 'IMG' && resource.complete) ||
+                (resource.tagName === 'SCRIPT' && resource.readyState === 'complete')) {
+                loadedResources++;
+            }
+        });
+        
+        // First update with initial state
+        updateProgressBar();
+        
+        // When window loads, complete the progress
+        window.addEventListener('load', function() {
+            isLoaded = true;
+            animateToCompletion();
+        });
+        
+        // Fallback to ensure we eventually show the site
+        setTimeout(function() {
+            isLoaded = true;
+            animateToCompletion();
+        }, 5000);
     }
     
-    // Start the progress update
-    requestAnimationFrame(updateProgress);
+    // Function to animate progress to 100%
+    function animateToCompletion() {
+        // Animate progress from current value to 100%
+        const startProgress = progress;
+        const startTime = Date.now();
+        const duration = 500; // Animation duration in ms
+        
+        function step() {
+            const currentTime = Date.now();
+            const elapsed = currentTime - startTime;
+            const progressDelta = elapsed / duration;
+            
+            if (progressDelta < 1) {
+                progress = startProgress + Math.round((100 - startProgress) * progressDelta);
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `Loading... ${progress}%`;
+                requestAnimationFrame(step);
+            } else {
+                // Reached 100%
+                progress = 100;
+                progressBar.style.width = '100%';
+                progressText.textContent = 'Loading... 100%';
+                
+                // Start transition animations
+                completeLoading();
+            }
+        }
+        
+        // Start animation
+        requestAnimationFrame(step);
+    }
+    
+    // Function to handle transition animations after loading completes
+    function completeLoading() {
+        progcont.classList.add('no_display');
+        logoContainer.classList.add('completed');
+        
+        setTimeout(() => {
+            expandingCircle.classList.add('expand');
+            
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.pointerEvents = 'none';
+                
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        }, 800);
+    }
+    
+    // Start tracking loading progress
+    trackLoadingProgress();
 });
-window.onload = function() {
-    window.scrollTo(0, 0);
-};
