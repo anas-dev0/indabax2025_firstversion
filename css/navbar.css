@@ -418,3 +418,8 @@ body.menu-open {
   -webkit-transform: none;
 }
 }
+@media (max-width:350px){
+  .navbar-logo img{
+    scale: 0.5;
+  }
+}

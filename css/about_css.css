@@ -522,4 +522,9 @@ sup {
     margin-top: 5vh;
   }
 }
+@media (max-width:340px){
+  #section5 .presented-by{
+    font-size: 2rem;
+  }
+}
 

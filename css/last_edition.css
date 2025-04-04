@@ -144,10 +144,21 @@ body{
         height: auto; /* Maintains aspect ratio */
     }
     #last_years_edition{
-        height: 100vh;
+        height: 150vh;
     }
     .lye_video_centent {
         margin-top: 15vh;
         height: auto;
     }
+}
+@media (max-width:500px){
+    #last_years_edition{
+        height: 100vh;
+    }
+}
+@media (max-width:400px){
+    .lye_video_centent{
+        margin-top: 5vh;
+    }
+    
 }

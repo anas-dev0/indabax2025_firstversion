@@ -171,3 +171,13 @@ body {
         font-size: 2.75rem;
     }
 }
+@media (max-width: 470px){
+    #locationAttachment .contact-info span {
+        font-size: 12.5px;
+    }
+}
+@media (max-width:350px){
+    #locationAttachment .contact-info span {
+        font-size: 10px;
+    }
+}
