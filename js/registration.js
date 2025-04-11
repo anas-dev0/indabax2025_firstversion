@@ -23,23 +23,32 @@ notyet.addEventListener("click",(e)=>{
 const deadline_poster= new Date(2025,3,23)
 const deadline_registration= new Date(2025,4,3)
 const registration_open=new Date (2025,3,22)
+const poster_open=new Date(2025,3,10)
 const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
 const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
-function check_date(){
-    let currentDate= new Date()
-    if(currentDate<registration_open){
-        notyet.style.display= "flex"
-    }
-    else if(currentDate>=deadline_registration){
-        popup.style.display = "flex"
-    }
-    else{
-        window.location.href =registration_link
-    }
+const binId ='67f932b78960c979a5831d23'
+const apiKey = '$2a$10$tziBoE.cD5oNjNoz1G50TuvyBC1at6hdFDkucDXGUOex7T/9OcSH2 '
+function check_date() {
+    fetch(`https://api.counterapi.dev/v1/IndabaX2025/registration/`)
+        .then(response => response.json())
+        .then(data => {
+            let currentDate = new Date();
+            if (currentDate < registration_open) {
+                notyet.style.display = "flex";
+            } else if (currentDate >= deadline_registration || data.count === 1) {
+                popup.style.display = "flex";
+            } else {
+                window.open(registration_link, "_blank");
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching counter:", error);
+        });
 }
+
 function check_date_poster(){
     let currentDate= new Date()
-    let poster_open=new Date(2025,3,10)
+    
     if(currentDate<poster_open){
         notyet.style.display= "flex"
     }
