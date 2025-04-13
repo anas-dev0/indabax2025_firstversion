@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndabaX Tunisia 2025 Program Schedule</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-color: #1a4b87;
+            background-image: url('/api/placeholder/1400/800');
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+        }
+        
+        header {
+            background-color: rgba(26, 75, 135, 0.95);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 1.2;
+        }
+        
+        /* Mobile menu button */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #cdb591;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 25px 15px;
+            background-color: rgba(26, 75, 135, 0.8);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #cdb591;
+            margin: 15px auto 0;
+        }
+        
+        .intro-text {
+            margin-bottom: 30px;
+            font-size: 1em;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 25px auto;
+            padding: 12px;
+            text-align: center;
+            background-color: #cdb591;
+            color: #1a4b87;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .button:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .note {
+            margin: 20px 0;
+            font-style: italic;
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        
+        .day-header {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        
+        .day-title {
+            width: 100%;
+        }
+        
+        .day-title h2 {
+            margin: 0;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            color: #cdb591;
+        }
+        
+        .day-title p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        
+        .schedule-container {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .day-sidebar {
+            width: 230px;
+            flex-shrink: 0;
+            padding-right: 15px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        
+        .schedule-content {
+            flex-grow: 1;
+        }
+        
+        .schedule-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+        
+        .time-circle {
+            width: 28px;
+            height: 28px;
+            background-color: #cdb591;
+            border-radius: 50%;
+            color: #1a4b87;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .time {
+            width: 100px;
+            flex-shrink: 0;
+            font-size: 0.85em;
+            color: #ccc;
+        }
+        
+        .event-details {
+            flex-grow: 1;
+        }
+        
+        .event-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .location-dot {
+            width: 2px;
+            height: 15px;
+            background-color: rgba(255,255,255,0.2);
+            margin: 0 auto 0 44px;
+        }
+        
+        .event-row {
+            display: flex;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .event-column {
+            flex: 1;
+            padding-right: 15px;
+            min-width: 250px;
+            margin-bottom: 15px;
+        }
+        
+        .speaker {
+            font-size: 0.85em;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        
+        .speaker img {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background-color: #cdb591;
+        }
+        
+        footer {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #1a4b87;
+            color: white;
+            text-align: center;
+            line-height: 36px;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #cdb591;
+            color: #1a4b87;
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                align-items: flex-start;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+            }
+            
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+            
+            nav.active {
+                max-height: 300px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                padding-top: 10px;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .schedule-container {
+                flex-direction: column;
+            }
+            
+            .day-sidebar {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            
+            .day-title {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .schedule-item {
+                flex-wrap: wrap;
+            }
+            
+            .time {
+                width: calc(100% - 40px);
+                margin-bottom: 8px;
+            }
+            
+            .event-details {
+                width: 100%;
+                padding-left: 40px; /* Align with the time number */
+            }
+            
+            .location-dot {
+                margin-left: 13px;
+            }
+            
+            .event-column {
+                flex: 100%;
+                padding-right: 0;
+            }
+            
+            .event-row {
+                flex-direction: column;
+            }
+        }
+        
+        /* Small mobile screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .time-circle {
+                width: 24px;
+                height: 24px;
+                font-size: 0.7em;
+            }
+            
+            .content {
+                padding: 20px 12px;
+            }
+            
+            .event-details {
+                padding-left: 36px;
+            }
+            
+            .day-title h2 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/api/placeholder/40/40" alt="IndabaX Logo">
+                <div class="logo-text">
+                    <div>Deep Learning</div>
+                    <div>IndabaX</div>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">IndabaX</a></li>
+                    <li><a href="#">Poster</a></li>
+                    <li><a href="#">Last Edition</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="content">
+        <h1>Programme</h1>
+        
+        <div class="intro-text">
+            Join us for an exciting two-day event with workshops, keynote speakers, 
+            panel discussions, and a 24-hour hackathon at IndabaX Tunisia 2025.
+        </div>
+        
+        <a href="#" class="button">Download Schedule</a>
+        
+        <p class="note">Program subject to change as we finalize details</p>
+        
+        <div class="day-header">
+            <div class="day-title">
+                <h2>Saturday, April 13th</h2>
+                <p>Day 1</p>
+            </div>
+        </div>
+        
+        <div class="schedule-container">
+            <div class="day-sidebar">
+                <p>Sup'com, Technopole El Ghazela</p>
+            </div>
+            
+            <div class="schedule-content">
+                <div class="schedule-item">
+                    <div class="time-circle">1</div>
+                    <div class="time">08:30 - 09:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Check In</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">2</div>
+                    <div class="time">09:00 - 09:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Opening Ceremony</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">3</div>
+                    <div class="time">09:30 - 10:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Keynote #1: The Future of AI</div>
+                        <div class="speaker">
+                            <img src="/api/placeholder/20/20" alt="Speaker">
+                            Karim Beguir
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">4</div>
+                    <div class="time">10:00 - 10:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Coffee Break</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">5</div>
+                    <div class="time">10:30 - 11:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Keynote #2: Generative AI at Africa's Crossroads</div>
+                        <div class="speaker">
+                            <img src="/api/placeholder/20/20" alt="Speaker">
+                            Firas Ben Hassan
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">6</div>
+                    <div class="time">11:05 - 11:35</div>
+                    <div class="event-details">
+                        <div class="event-title">Keynote #3: Quantum, Computing and Machine Learning</div>
+                        <div class="speaker">
+                            <img src="/api/placeholder/20/20" alt="Speaker">
+                            Tom Barrett
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">7</div>
+                    <div class="time">11:35 - 13:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Lunch Break + Musical Interlude</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">8</div>
+                    <div class="time">13:00 - 14:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Parallel Workshops</div>
+                        <div class="speaker">
+                            <img src="/api/placeholder/20/20" alt="Location">
+                            Click for more details!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">9</div>
+                    <div class="time">14:30 - 15:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Coffee Break</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">10</div>
+                    <div class="time">15:00 - 16:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Bio-AI Workshop</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">11</div>
+                    <div class="time">17:00 - 20:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Hackathon Start</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">12</div>
+                    <div class="time">20:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Dinner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-header">
+            <div class="day-title">
+                <h2>Sunday, April 14th</h2>
+                <p>Day 2</p>
+            </div>
+        </div>
+        
+        <div class="schedule-container">
+            <div class="day-sidebar">
+                <p>Sup'com, Technopole El Ghazela</p>
+            </div>
+            
+            <div class="schedule-content">
+                <div class="schedule-item">
+                    <div class="time-circle">1</div>
+                    <div class="time">00:00 - 00:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Coffee Break</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">2</div>
+                    <div class="time">04:00 - 04:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Coffee Break</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">3</div>
+                    <div class="time">07:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Breakfast</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">4</div>
+                    <div class="time">13:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Hackathon End</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">5</div>
+                    <div class="time">13:00 - 14:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Lunch</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">6</div>
+                    <div class="time">14:00 - 15:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Pitching</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">7</div>
+                    <div class="time">15:00 - 15:30</div>
+                    <div class="event-details">
+                        <div class="event-title">Winners Announcement</div>
+                    </div>
+                </div>
+                
+                <div class="location-dot"></div>
+                
+                <div class="schedule-item">
+                    <div class="time-circle">8</div>
+                    <div class="time">15:30 - 16:00</div>
+                    <div class="event-details">
+                        <div class="event-title">Closing Ceremony</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+        </div>
+        <p>IndabaX Tunisia 2025 • April 13th & 14th</p>
+        <p>Sup'com, Technopole El Ghazela</p>
+        <p>Contact: info@indabatunisia.com</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                menuToggle.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    menuToggle.textContent = '☰';
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = mainNav.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    menuToggle.textContent = '☰';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
