@@ -20,10 +20,10 @@ notyet.addEventListener("click",(e)=>{
     }
 })
 
-const deadline_poster= new Date(2025,3,23)
-const deadline_registration= new Date(2025,4,3)
-const registration_open=new Date (2025,3,22)
-const poster_open=new Date(2025,3,10)
+const deadline_poster= new Date(2025,3,25)
+const deadline_registration= new Date(2025,3,28)
+const registration_open=new Date (2025,3,17)
+const poster_open=new Date(2025,3,17,20,0,0)
 const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
 const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
 const binId ='67f932b78960c979a5831d23'
@@ -48,7 +48,6 @@ function check_date() {
 
 function check_date_poster(){
     let currentDate= new Date()
-    
     if(currentDate<poster_open){
         notyet.style.display= "flex"
     }
@@ -79,7 +78,7 @@ const question1=document.querySelector(".question1")
 const answer1=document.querySelector(".answer1")
 function questionchange(){
     let currentDate=new Date()
-    let poster_open=new Date(2025,3,8)
+    
     let x
     if(currentDate<poster_open){
         question1.innerText="When does the registration for the poster session begin?"
