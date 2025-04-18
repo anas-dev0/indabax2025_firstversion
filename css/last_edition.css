@@ -120,10 +120,10 @@ body{
     width: 100%;
     height: 10vh;
 }
-/* #last_years_edition::before {
+#last_years_edition::before {
     top: 0;
     background: linear-gradient(to bottom, #075388 0%, rgba(0, 0, 0, 0) 100%);
-} */
+}
 
 #last_years_edition::after {
     bottom: 0;

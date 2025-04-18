@@ -23,7 +23,7 @@ notyet.addEventListener("click",(e)=>{
 const deadline_poster= new Date(2025,3,25)
 const deadline_registration= new Date(2025,3,28)
 const registration_open=new Date (2025,3,17)
-const poster_open=new Date(2025,3,17,20,0,0)
+const poster_open=new Date(2025,3,18,20,0,0)
 const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
 const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
 const binId ='67f932b78960c979a5831d23'
@@ -82,11 +82,11 @@ function questionchange(){
     let x
     if(currentDate<poster_open){
         question1.innerText="When does the registration for the poster session begin?"
-        answer1.innerText="the registration for poster session will be available on 10th April,2025"
+        answer1.innerText="the registration for poster session will be available on 18th April,2025 at 20h"
     }
     else{
         question1.innerText="When is the deadline for the registration of the poster session?"
-        answer1.innerText="Deadline for the registration is on 23th April,2025"
+        answer1.innerText="Deadline for the registration is on 25th April,2025"
     }
 }
 questionchange()
