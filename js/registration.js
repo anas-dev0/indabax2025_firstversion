@@ -29,22 +29,22 @@ const poster_link="https://forms.gle/EQoghUejPNMvYD8z9"
 const binId ='67f932b78960c979a5831d23'
 const apiKey = '$2a$10$tziBoE.cD5oNjNoz1G50TuvyBC1at6hdFDkucDXGUOex7T/9OcSH2 '
 function check_date() {
-    fetch(`https://api.counterapi.dev/v1/IndabaX2025/registration/`)
-        .then(response => response.json())
+     fetch(`https://api.counterapi.dev/v1/IndabaX2025/registration/`)
+         .then(response => response.json())
         .then(data => {
             let currentDate = new Date();
-            if (currentDate < registration_open) {
+             if (currentDate < registration_open) {
                 notyet.style.display = "flex";
-            } else if (currentDate >= deadline_registration || data.count === 1) {
+             } else if (currentDate >= deadline_registration || data.count === 1) {
                 popup.style.display = "flex";
-            } else {
-                window.open(registration_link, "_blank");
+           } else {
+                document.location.href = registration_link;
+                // window.open(registration_link, "_blank");
+                // alert("ray mahloula")
             }
         })
-        .catch(error => {
-            console.error("Error fetching counter:", error);
-        });
-}
+ }
+
 
 function check_date_poster(){
     let currentDate= new Date()

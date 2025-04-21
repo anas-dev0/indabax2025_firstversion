@@ -233,6 +233,8 @@ transition: all 0.3s ease;
 margin-left: 15px;
 position: relative;
 overflow: hidden;
+cursor: pointer;
+z-index: 100;
 }
 
 .navbar-contact::before {
