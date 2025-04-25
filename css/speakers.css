@@ -1,0 +1,500 @@
+#speaker-section {
+  display: flex;
+  padding-top: 10vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #075388;
+}
+
+.spacebetweensections {
+  margin-top: 50px;
+  height: 150px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(26, 60, 102, 0) 20%, rgba(45, 81, 127, 0) 50%, #1b569e 90%);
+}
+
+#speaker-section .sptitle {
+  color: aliceblue;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#speaker-section .col-md-4 {
+  display: flex;
+  justify-content: center;
+  width: 40vh;
+}
+
+#speaker-section .speakersrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  column-gap: 50px;
+  width: 90%;
+  justify-self: center;
+}
+
+#speaker-section {
+  position: relative;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  height: 450px;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 30px 0 auto;
+  background-color: white;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  will-change: transform; /* Optimize animations */
+  touch-action: manipulation; /* Prevent double-tap zoom */
+}
+
+/* Front of card (speaker image and name) */
+.cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #1f385b;
+}
+
+.card:hover .cover,
+.card.flipped .cover {
+  transform: translateY(-100%);
+}
+
+.cover:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 140px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cover h1 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.65em;
+  width: 100%;
+  position: relative;
+}
+
+.cover .job {
+  font-weight: 200;
+  margin-bottom: 30px;
+  width: 90%;
+  color: white;
+  font-size: 1.1em;
+  text-align: center;
+  position: relative;
+}
+
+/* Back of card (biography) */
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  padding: 20px;
+  background: #d2b48c;
+  color: white;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card:hover .card-back,
+.card.flipped .card-back {
+  transform: translateY(0%);
+}
+
+/* Card back content styling */
+.card-back h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+
+.card:hover .card-back h2,
+.card.flipped .card-back h2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-back p.spbiography {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  height: max-content;
+  min-height: 200px;
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+  overflow-y: auto;
+  height: fit-content;
+  width: 100%;
+}
+
+.card:hover .card-back p.spbiography,
+.card.flipped .card-back p.spbiography {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-back button {
+  display: inline-block;
+  color: #1f385b;
+  background-color: white;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease 0.25s, opacity 0.4s ease 0.25s, background-color 0.3s ease;
+}
+
+.card:hover .card-back button,
+.card.flipped .card-back button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-back button:hover {
+  background-color: #f0f0f0;
+}
+
+.card-back .splinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 15px;
+  width: 100%;
+  margin-top: 10px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease 0.3s, opacity 0.4s ease 0.3s;
+}
+
+.card:hover .card-back .splinks,
+.card.flipped .card-back .splinks {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-back .splinks a {
+  color: white;
+  font-size: 2em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-back .splinks a:hover {
+  color: #1f385b;
+  transform: translateY(-5px);
+}
+
+.speaker_info {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  z-index: 500;
+  left: 0;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.full_bio {
+  height: 400px;
+  width: 500px;
+  background-color: #042d62;
+  border-radius: 15px;
+}
+
+.bio_header {
+  width: 100%;
+  height: 20%;
+  border-bottom: solid #d2b48c 3px;
+  position: relative;
+}
+
+.bio_header h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.bio_header p {
+  color: white;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.bio_header button {
+  background: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.bio_header img {
+  height: 40px;
+  width: 40px;
+  transition: 0.5s ease;
+}
+
+.bio_header img:hover {
+  transform: rotate(90deg) scale(1.3);
+}
+
+.bio_body {
+  width: 100%;
+  height: 65%;
+  overflow: auto;
+}
+
+.bio_body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bio_body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bio_body::-webkit-scrollbar-thumb {
+  background-color: #d2b48c;
+  border-radius: 10px;
+  max-height: 30px;
+}
+
+.bio_body p {
+  color: white;
+  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.bio_footer {
+  width: 100%;
+  height: 15%;
+  border-top: solid #d2b48c 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio_footer a {
+  border-radius: 15px;
+}
+
+.bio_footer i {
+  font-size: 2rem;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.bio_footer i:hover {
+  transform: scale(1.2);
+  color: #d2b48c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #speaker-section .card {
+    height: 650px;
+    width: 470px;
+  }
+  #speaker-section .card .card-back .spbiography {
+    font-size: 16px !important;
+    max-height: 350px;
+  }
+  .spacebetweensections {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  #speaker-section .card {
+    height: 750px;
+    width: 550px;
+  }
+  #speaker-section .card .card-back .spbiography {
+    font-size: 18.5px !important;
+    max-height: 450px;
+  }
+  #speaker-section .splinks a {
+    font-size: 45px !important;
+  }
+  .cover::before {
+    top: 25px !important;
+    left: 25px !important;
+    right: 25px !important;
+    bottom: 140px !important;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#speaker-section .gradient {
+  position: absolute;
+  --size: 450px;
+  --speed: 20s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  width: var(--size);
+  height: 600px;
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(#bfd6ed72, #075388);
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 767px) {
+  #speaker-section .gradient {
+    display: none !important;
+  }
+}
+
+/* Speaker images */
+.speaker_number .cover::before {
+  border-radius: 15px;
+}
+
+/* Speaker 1 */
+.speaker_number:nth-child(1) .cover::before {
+  background: url(../assests/speakers_photos/Mourad_Telmini.png);
+  background-size: cover;
+}
+
+/* Speaker 2 */
+.speaker_number:nth-child(3) .cover::before {
+  background: url(../assests/speakers_photos/Amal_Jlassi.png);
+  background-size: cover;
+}
+
+/* Speaker 3 */
+.speaker_number:nth-child(5) .cover::before {
+  background: url(../assests/speakers_photos/nesrine_cheheta.png);
+  background-size: cover;
+  background-position: 0 0;
+}
+.speaker_number:nth-child(7) .cover::before{
+  background: url(../assests/speakers_photos/amine_kerkeni.png);
+  background-size: cover;
+  background-position: 0 0;
+}
+
+/* Card back special elements */
+.card-back .twittersvg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  padding-bottom: 1%;
+}
+
+.card-back svg {
+  fill: white;
+  -webkit-fill: white;
+  -moz-fill: white;
+  transition: fill 0.3s ease;
+}
+
+.card-back svg:hover {
+  fill: #1f385b;
+}
+
+@media (max-width:780px) {
+  #speaker-section .sptitle {
+    font-size: 2.5rem;
+    margin-top: 5vh;
+  }
+  .speakers_fullbio {
+    margin: 5vw;
+  }
+  .bio_header p {
+    font-size: 13px;
+  }
+  .card{
+    margin: 3vw;
+  }
+  #speaker-section .speakersrow {
+    width: 99%;
+  }
+}
+
+@media (max-width:480px) {
+  .bio_header img {
+    height: 25px;
+    width: 25px;
+  }
+  .bio_header button {
+    margin: 0px;
+  }
+}
