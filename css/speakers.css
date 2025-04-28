@@ -233,7 +233,7 @@
   display: flex;
   align-items: center;
   top: 0;
-  z-index: 500;
+  z-index: 1000;
   left: 0;
   justify-content: center;
   backdrop-filter: blur(5px);
@@ -266,7 +266,7 @@
 .bio_header p {
   color: white;
   padding-left: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -303,6 +303,7 @@
 
 .bio_body::-webkit-scrollbar {
   width: 6px;
+  display: block;
 }
 
 .bio_body::-webkit-scrollbar-track {
@@ -444,12 +445,48 @@
   background-size: cover;
   background-position: 0 0;
 }
+/* Speaker 4 */
 .speaker_number:nth-child(7) .cover::before{
   background: url(../assests/speakers_photos/amine_kerkeni.png);
   background-size: cover;
   background-position: 0 0;
 }
-
+/* Speaker 5 */
+.speaker_number:nth-child(9) .cover::before{
+  background: url(../assests/speakers_photos/aymen_khouja.jpeg);
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Speaker 6 */
+.speaker_number:nth-child(11) .cover::before{
+  background: url(../assests/speakers_photos/wiem_khlifi.jpg);
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Speaker 7 */
+.speaker_number:nth-child(13) .cover::before{
+  background: url(../assests/speakers_photos/imen_jendoubi.png);
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Speaker 8 */
+.speaker_number:nth-child(15) .cover::before{
+  background: url(../assests/speakers_photos/jawher_jabri.png);
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Speaker 9 */
+.speaker_number:nth-child(17) .cover::before{
+  background: url(../assests/speakers_photos/mohamed_mejri.jpg);
+  background-size: cover;
+  background-position: 0 0;
+}
+/* Speaker 10 */
+.speaker_number:nth-child(19) .cover::before{
+  background: url(../assests/speakers_photos/nizar_ben_hmida.png);
+  background-size: cover;
+  background-position: 0 0;
+}
 /* Card back special elements */
 .card-back .twittersvg {
   display: flex;

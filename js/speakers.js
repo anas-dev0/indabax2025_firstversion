@@ -103,3 +103,89 @@ popup4.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
+
+const open5=document.querySelector(".open5")
+const popup5=document.querySelector(".dialog5")
+open5.addEventListener('click', () => {
+  popup5.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup5.addEventListener("click", (e) => {
+  if (e.target === popup5) {
+    popup5.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+const open6=document.querySelector(".open6")
+const popup6=document.querySelector(".dialog6")
+open6.addEventListener('click', () => {
+  popup6.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup6.addEventListener("click", (e) => {
+  if (e.target === popup6) {
+    popup6.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+
+const open7=document.querySelector(".open7")
+const popup7=document.querySelector(".dialog7")
+open7.addEventListener('click', () => {
+  popup7.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup7.addEventListener("click", (e) => {
+  if (e.target === popup7) {
+    popup7.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+const open8=document.querySelector(".open8")
+const popup8=document.querySelector(".dialog8")
+open8.addEventListener('click', () => {
+  popup8.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup8.addEventListener("click", (e) => {
+  if (e.target === popup8) {
+    popup8.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+
+const open9=document.querySelector(".open9")
+const popup9=document.querySelector(".dialog9")
+open9.addEventListener('click', () => {
+  popup9.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup9.addEventListener("click", (e) => {
+  if (e.target === popup9) {
+    popup9.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+const open10=document.querySelector(".open10")
+const popup10=document.querySelector(".dialog10")
+open10.addEventListener('click', () => {
+  popup10.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+popup10.addEventListener("click", (e) => {
+  if (e.target === popup10) {
+    popup10.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});

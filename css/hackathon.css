@@ -1,0 +1,311 @@
+#Hackaton-Section{
+	background: #075388;
+	margin-top: -2px;
+}
+
+#Hackaton-Section::before{
+	content: "";
+	display:flex;
+	position: absolute;
+	width: 100%;
+	height: 55%;
+	transform: translateY(-3px);
+	background: linear-gradient(to bottom, #075388(22, 60, 107) 0%, rgba(0, 0, 0, 0) 40%);
+	z-index: 1;
+}
+
+#Hackaton-Section .hackathon-panel.blue::before {
+	content: "";
+	display:flex;
+	position: absolute;
+	width: 100%;
+	right: 0;
+	height: 100%;
+	background: linear-gradient(to top, rgb(22, 65, 117) 0%, rgba(0, 0, 0, 0) 40%);
+	z-index: 1;
+}
+
+@media only screen and (max-width : 768px) {
+
+
+	#Hackaton-Section .hackathon-panel.blue h1{
+		font-size: 2.2rem !important;
+		padding-top: 0 !important;
+		height: 8% !important;
+	}
+	@media only screen and (max-width: 375px){
+		#Hackaton-Section .hackathon-panel.blue h1{
+			font-size: 2rem !important;
+			padding-top: none !important;
+			position: static !important;
+			height: 10% !important;
+			border: 0px solid #DFEBF6 !important;
+			border-radius: 0px !important;
+			width: 100% !important;
+			background-color: transparent !important;
+			backdrop-filter: blur(0px) !important;
+		}
+		
+	}
+	#Hackaton-Section .hackathon-panel.blue::before {
+		width: 0%;
+	}
+}
+
+#Hackaton-Section .hackathon-panel.blue {
+    background-color: #0b172e;
+
+}
+/*
+#Hackaton-Section .hackathon-panel.blue::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, rgba(5, 26, 52, 1) 0%, rgba(0, 0, 0, 0) 50%);
+		z-index: +1;
+}
+*/
+#Hackaton-Section .hackathon-panel.blue div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	width: 50%;
+
+}
+
+#Hackaton-Section .hackathon-panel.blue h1{
+    font-size: 3.5rem;
+	padding-top: 15px;
+	top: 33%;
+}
+
+#Hackaton-Section .hackathon-panel h2 {
+    font-size: 2.5rem;
+}
+
+#Hackaton-Section .hackathon-panel.red {
+    background-color: #bfd6ed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	row-gap: 5vh;
+}
+
+#Hackaton-Section .hackathon-zindi{
+	height: 50px;
+}
+
+#Hackaton-Section .hackathon-panel.orange {
+    background-color: #DFEBF6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	row-gap: 10vh;
+}
+
+#Hackaton-Section div {
+	text-align: center;
+}
+
+#Hackaton-Section div p:not(.notp){
+	text-align: justify
+}
+
+#Hackaton-Section .hackathon-panel {
+    height: 100vh;
+}
+
+@media screen and (min-width: 769px) and (max-width:1600px) {
+    #Hackaton-Section .hackathon-panel.red {
+            width: 50vw;
+    }
+    
+    #Hackaton-Section .hackathon-panel.orange {
+        width: 50vw;
+    }
+    
+    #Hackaton-Section .hackathon-panel.purple {
+        width: 50vw;
+    }
+    
+    #Hackaton-Section .hackathon-panel.green {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:769px) {
+    #Hackaton-Section .hackathon-panel.blue div.col:first-of-type {
+            display: none;
+    }
+}
+
+@media screen and (max-width:426px) {
+	#Hackaton-Section .hackathon-panel h2{
+		font-size: 37px;
+        text-transform: capitalize;
+	}
+		
+	#Hackaton-Section .hackathon-panel p {
+		font-weight: 600;
+        font-size: 19px !important;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	#Hackaton-Section .hackathon-panel {
+		padding-right: 2rem !important;
+		padding-left: 2rem !important;
+	}
+}
+
+@media screen and (max-width: 1320px) {
+	
+	#Hackaton-Section .hackathon-panel h1{
+		font-size: 2.5rem !important;
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+	#Hackaton-Section .hackathon-panel h1 {
+		font-size: 2rem !important;
+	}
+
+}
+
+@media only screen and (min-width:1600px){
+	#Hackaton-Section .hackathon-panel.red {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.orange {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.purple {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.green {
+		width: 50vw;
+	}
+	#Hackaton-Section div p:not(.notp) {
+		font-size: 46px !important;
+		text-align: justify;
+	}
+	#Hackaton-Section .hackathon-zindi{
+		height: 6rem !important;
+	}
+}
+
+@media only screen and (min-width:2400px){
+	#Hackaton-Section .hackathon-panel.red {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.orange {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.purple {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.green {
+		width: 50vw;
+	}
+	#Hackaton-Section .hackathon-panel h2{
+		font-size: 5rem;
+	}
+	#Hackaton-Section div p:not(.notp) {
+		font-size: 60px !important;
+		text-align: justify;
+	}
+	#Hackaton-Section .hackathon-zindi{
+		height: 7rem !important;
+	}
+	#Hackaton-Section .hackathon-panel.blue h1 {
+		font-size: 6rem;
+	}
+	#Hackaton-Section .hackathon-panel.blue .regbut {
+		font-size: 4rem;
+		width: 350px;
+		height: auto;
+	}
+}
+
+@media only screen and (min-width:3000px){
+	#Hackaton-Section .hackathon-panel.red {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.orange {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.purple {
+		width: 50vw;
+	}
+
+	#Hackaton-Section .hackathon-panel.green {
+		width: 50vw;
+	}
+	#Hackaton-Section .hackathon-panel h2{
+		font-size: 7rem;
+	}
+	#Hackaton-Section div p:not(.notp) {
+		font-size: 80px !important;
+		text-align: justify;
+		width: 90%;
+	}
+	#Hackaton-Section .hackathon-zindi{
+		height: 7rem !important;
+	}
+	#Hackaton-Section .hackathon-panel.blue h1 {
+		font-size: 8rem;
+	}
+	#Hackaton-Section .hackathon-panel.blue .regbut {
+		font-size: 4.5rem;
+		width: 420px;
+		height: 140px;
+	}
+}
+
+#Hackaton-Section .regbut  {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	font-family: Rubik;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.25;
+	user-select: none;
+	top:53%;
+	white-space: nowrap;
+	text-align: center;
+	padding: 0.65rem 1.5rem;
+	width: 175px;
+	height: 65px;
+	border-radius: 70px;
+	color: var(--color-white);
+	background-color: #d2b48c;
+	transition: all 0.3s ease-in-out;
+	color: #fff;
+	text-decoration: none;
+	z-index: 95;
+	margin-top: 2rem;
+}
+
+#Hackaton-Section .regbut:hover {
+	background-color: #cdd9e4;
+	color: #000;
+}

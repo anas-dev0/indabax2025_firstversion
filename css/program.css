@@ -1,0 +1,383 @@
+.indaba-program-section * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.indaba-timeline-description h2{
+    font-size: 1.5rem;
+}
+/* Remove these since they're no longer needed */
+.show_disc{
+    display: none;
+}
+.more_info{
+    display: none;
+}
+.indaba-program-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    margin: 0;
+    padding: 20px 0;
+    background-image: url(/assests/site_cover.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+@supports (-webkit-touch-callout: none) or (not (background-attachment: fixed)) {
+    .indaba-program-section {
+        background-repeat: repeat;
+    }
+}
+.indaba-program-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px 15px;
+    background-color: rgba(26, 75, 135, 0.8);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(1px);
+    opacity: 1;
+}
+
+.indaba-program-section h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.indaba-program-section h1:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #cdb591;
+    margin: 15px auto 0;
+}
+
+.indaba-intro-text {
+    margin-bottom: 30px;
+    font-size: 1em;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indaba-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 12px;
+    text-align: center;
+    background-color: #cdb591;
+    color: #1a4b87;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.indaba-button:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.indaba-note {
+    margin: 20px 0;
+    font-style: italic;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Timeline Styles */
+.indaba-day-section {
+    margin-bottom: 50px;
+}
+
+.indaba-day-title {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.indaba-timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.indaba-timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #cdb591;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.indaba-timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 50px; /* Add padding to make room for description */
+    /* Add minimum height to prevent overlapping */
+    min-height: 150px; 
+}
+
+/* Restructuring the timeline item layout */
+.indaba-timeline-item-header {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 20px;
+}
+.indaba-timeline-description:has(h2, ul) {
+    /* Adjust height automatically based on content */
+    max-height: none;
+    overflow: visible;
+}
+.indaba-timeline-item:has(.indaba-timeline-description h2) + .indaba-timeline-item {
+    margin-top: 120px; /* Add extra margin to prevent overlap */
+}
+.indaba-timeline-content {
+    position: absolute;
+    width: 45%;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+/* Position content on alternating sides */
+.indaba-timeline-item:nth-child(odd) .indaba-timeline-content {
+    left: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.indaba-timeline-item:nth-child(even) .indaba-timeline-content {
+    right: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.indaba-timeline-time {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.indaba-timeline-title {
+    font-size: 1em;
+    color: #cdb591;
+}
+.progr_deteil10h{
+    text-align: center;
+}
+
+.indaba-timeline-node {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indaba-timeline-node img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Connector lines */
+.indaba-timeline-connector {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #cdb591;
+    top: 20px; /* Center vertically with the node */
+    z-index: 1;
+}
+
+.indaba-timeline-item:nth-child(odd) .indaba-timeline-connector {
+    right: calc(50% + 20px);
+}
+
+.indaba-timeline-item:nth-child(even) .indaba-timeline-connector {
+    left: calc(50% + 20px);
+}
+
+/* Description styles - now in normal document flow */
+.indaba-timeline-description {
+    width: 45%;
+    padding: 10px 15px;
+    background-color: rgba(205, 181, 145, 0.9);
+    color: #1a4b87;
+    border-radius: 6px;
+    font-size: 0.9em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    z-index: 20; /* Ensure it's above other elements */
+}
+/* Position description on opposite side of content */
+.indaba-timeline-item:nth-child(odd) .indaba-timeline-description {
+    left: 55%; /* Position to the left of center */
+    text-align: left;
+    margin-right: 20px;
+}
+
+.indaba-timeline-item:nth-child(even) .indaba-timeline-description {
+    right: 55%; /* Position to the right of center */
+    text-align: left;
+    margin-left: 20px;
+}
+
+#show-day2-button, #hide-day2-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto 10px;
+    padding: 12px;
+    text-align: center;
+    background-color: #cdb591;
+    color: #1a4b87;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#show-day2-button:hover, #hide-day2-button:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.indaba-timeline-description li{
+    margin-left: 10px;
+}
+/* Mobile Styles for Timeline */
+@media (max-width: 768px) {
+    .indaba-timeline::after {
+        left: 30px;
+    }
+    .indaba-timeline-item:has(.indaba-timeline-description h2) + .indaba-timeline-item {
+        margin-top: 0;
+    }
+    .indaba-timeline-item {
+        padding-bottom: 30px;
+        min-height: auto;
+    }
+    
+    .indaba-timeline-content {
+        width: calc(100% - 70px);
+        left: 70px !important;
+        right: auto !important;
+        text-align: left !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding: 7px;
+    }
+    
+    .indaba-timeline-node {
+        left: 30px;
+        transform: none;
+    }
+    
+    .indaba-timeline-connector {
+        width: 10px;
+        left: 30px !important;
+        right: auto !important;
+        margin-left: 40px;
+    }
+    
+    /* Adjust descriptions for mobile */
+    .indaba-timeline-description {
+        position: relative;
+        width: calc(100% - 70px);
+        margin-left: 70px !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+        top: auto;
+        left: auto !important;
+        right: auto !important;
+    }
+    
+    /* Remove alternating layout on mobile */
+    .indaba-timeline-item:nth-child(odd) .indaba-timeline-description,
+    .indaba-timeline-item:nth-child(even) .indaba-timeline-description {
+        margin-left: 70px;
+        margin-right: 0;
+        text-align: left;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .indaba-timeline-connector{
+        width: 3vw;
+    }
+    .indaba-program-section h1 {
+        font-size: 1.8em;
+    }
+    
+    .indaba-day-title {
+        font-size: 1.5em;
+    }
+    
+    .indaba-timeline-time {
+        font-size: 1em;
+    }
+    
+    .indaba-timeline-title {
+        font-size: 0.9em;
+    }
+    
+    .indaba-program-content {
+        padding: 20px 12px;
+    }
+    
+    .indaba-timeline-content{
+        padding: 10px;
+    }
+    .indaba-timeline-item:has(.indaba-timeline-description h2) + .indaba-timeline-item {
+        margin-top: 30px;
+    }
+}
+
+.Prog_outline{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    text-shadow: 0 0 1px #ffff,
+               0 0 1.5px #ffff,
+               0 0 1.5px #ffff;
+}
+
+.program-nav {
+    text-align: center;
+}
