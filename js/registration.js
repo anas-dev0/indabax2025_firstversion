@@ -21,7 +21,7 @@ notyet.addEventListener("click",(e)=>{
 })
 
 const deadline_poster= new Date(2025,3,25)
-const deadline_registration= new Date(2025,4,2)
+const deadline_registration= new Date(2025,3,29)
 const registration_open=new Date (2025,3,17)
 const poster_open=new Date(2025,3,18,20,0,0)
 const registration_link="https://forms.gle/T1njpkN4H1YGwVLy5"
