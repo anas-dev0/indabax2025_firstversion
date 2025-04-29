@@ -434,55 +434,55 @@
 }
 
 /* Speaker 2 */
-.speaker_number:nth-child(3) .cover::before {
+/* .speaker_number:nth-child(3) .cover::before {
   background: url(../assests/speakers_photos/Amal_Jlassi.png);
   background-size: cover;
-}
+} */
 
 /* Speaker 3 */
-.speaker_number:nth-child(5) .cover::before {
+.speaker_number:nth-child(3) .cover::before {
   background: url(../assests/speakers_photos/nesrine_cheheta.png);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 4 */
-.speaker_number:nth-child(7) .cover::before{
+.speaker_number:nth-child(5) .cover::before{
   background: url(../assests/speakers_photos/amine_kerkeni.png);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 5 */
-.speaker_number:nth-child(9) .cover::before{
+.speaker_number:nth-child(7) .cover::before{
   background: url(../assests/speakers_photos/aymen_khouja.jpeg);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 6 */
-.speaker_number:nth-child(11) .cover::before{
+.speaker_number:nth-child(9) .cover::before{
   background: url(../assests/speakers_photos/wiem_khlifi.jpg);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 7 */
-.speaker_number:nth-child(13) .cover::before{
+.speaker_number:nth-child(11) .cover::before{
   background: url(../assests/speakers_photos/imen_jendoubi.png);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 8 */
-.speaker_number:nth-child(15) .cover::before{
+.speaker_number:nth-child(13) .cover::before{
   background: url(../assests/speakers_photos/jawher_jabri.png);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 9 */
-.speaker_number:nth-child(17) .cover::before{
+.speaker_number:nth-child(15) .cover::before{
   background: url(../assests/speakers_photos/mohamed_mejri.jpg);
   background-size: cover;
   background-position: 0 0;
 }
 /* Speaker 10 */
-.speaker_number:nth-child(19) .cover::before{
+.speaker_number:nth-child(17) .cover::before{
   background: url(../assests/speakers_photos/nizar_ben_hmida.png);
   background-size: cover;
   background-position: 0 0;
