@@ -20,7 +20,7 @@
 	background: var(--ah-light);
 	color: var(--ah-dark);
 	overflow-x: hidden;
-	background-color: var(--ah-primary);
+	background-color: #075388;
 	color: white;
 	min-height: 100vh;
 	display: flex;

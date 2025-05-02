@@ -487,6 +487,10 @@
   background-size: cover;
   background-position: 0 0;
 }
+.speaker_number:nth-child(19) .cover::before {
+  background: url(../assests/speakers_photos/Iheb_Kesraoui.png);
+  background-size: cover;
+}
 /* Card back special elements */
 .card-back .twittersvg {
   display: flex;
